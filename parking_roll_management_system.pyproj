@@ -1,0 +1,60 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1aca56a8-7e99-485c-a0c2-dd921a82aef9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>parking_roll_management_system</Name>
+    <RootNamespace>parking_roll_management_system</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BarrierGate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarplateInterface.py" />
+    <Compile Include="Carplate\inference.py" />
+    <Compile Include="Form\ChargeStandard.py" />
+    <Compile Include="Form\Login.py" />
+    <Compile Include="Form\MainWindow.py" />
+    <Compile Include="Form\QueryStatistics.py" />
+    <Compile Include="Form\Ui_ChargeStandard.py" />
+    <Compile Include="Form\Ui_Login.py" />
+    <Compile Include="Form\Ui_MainWindow.py" />
+    <Compile Include="Form\Ui_QueryStatistics.py" />
+    <Compile Include="LPRThread.py" />
+    <Compile Include="main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
+    <Folder Include="Carplate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Form\ChargeStandard.ui" />
+    <Content Include="Form\Login.ui" />
+    <Content Include="Form\MainWindow.ui" />
+    <Content Include="Form\QueryStatistics.ui" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
